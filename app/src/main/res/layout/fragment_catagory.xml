@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CatagoryFragment">
+
+    <GridLayout
+        android:id="@+id/catagoryGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="4"
+        android:padding="4dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+
+        <include layout="@layout/catagory_fragment_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_margin="2dp"
+            android:layout_columnWeight="1"/>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

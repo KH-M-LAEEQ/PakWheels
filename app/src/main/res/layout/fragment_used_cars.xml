@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".usedCars">
+            <LinearLayout
+                android:id="@+id/topTabs"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#005daa"
+                android:weightSum="4"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tabUsedCars"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/used_cars"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:cornerRadius="50dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="@color/white"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tabNewCars"
+                    android:layout_width="0dp"
+                    android:padding="8dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="@string/new_cars"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="50dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#FFFFFF"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tabBikes"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/bikes"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="50dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#FFFFFF"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tabAutostore"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/autostore"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="50dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#005DAA"
+                android:padding="10dp"
+                android:elevation="3dp"
+                app:layout_constraintTop_toBottomOf="@id/topTabs">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="@string/search_used_cars"
+                    android:background="@android:drawable/edit_text"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:text="@string/all_cities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/UsedCarText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/browse_used_cars"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_margin="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchBar"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/UsedCarLinear"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:weightSum="4"
+                app:layout_constraintTop_toBottomOf="@id/UsedCarText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/category"
+                    android:padding="8dp"
+                    app:cornerRadius="20dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBudget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/budget"
+                    app:cornerRadius="20dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBrand"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/brand"
+                    app:cornerRadius="20dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnModel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/model"
+                    app:cornerRadius="20dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/childFragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/UsedCarLinear" />
+
+            <TextView
+                android:id="@+id/PakWheelsOffering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/pakwheels_offering"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/childFragmentContainer"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <GridLayout
+            android:id="@+id/offerGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/PakWheelsOffering"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include
+                android:id="@+id/cardview1"
+                layout="@layout/card_view"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1" />
+
+            <include
+                android:id="@+id/cardview2"
+                layout="@layout/card_view"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1" />
+
+            <include
+                android:id="@+id/cardview3"
+                layout="@layout/card_view"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1" />
+
+            <include
+                android:id="@+id/cardview4"
+                layout="@layout/card_view"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1" />
+
+        </GridLayout>
+
+        <TableLayout
+            android:id="@+id/fuelPriceTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+
+            <TableRow
+                android:background="#CCCCCC">
+                <TextView
+                    android:text="@string/fuel_type"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+                <TextView
+                    android:text="@string/price_pkr_l"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/petrol"
+                    android:padding="8dp"/>
+                <TextView
+                    android:text="@string/_270"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/petrol_super"
+                    android:padding="8dp"/>
+                <TextView
+                    android:text="@string/_263"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/diesel"
+                    android:padding="8dp"/>
+                <TextView
+                    android:text="@string/_240"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/high_speed_diesel"
+                    android:padding="8dp"/>
+                <TextView
+                    android:text="@string/_270"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/cng"
+                    android:padding="8dp"/>
+                <TextView
+                    android:text="@string/_180"
+                    android:padding="8dp"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="password">Password</string>
+    <string name="signup">SignUp</string>
+    <string name="email">Email</string>
+    <string name="confirmpassword">ConfirmPassword</string>
+    <string name="already_have_an_account_login">Already have an account. Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="pakwheels_logo">pakwheels_logo</string>
+    <string name="pakwheels">PakWheels</string>
+    <string name="used_cars">Used Cars</string>
+    <string name="new_cars">New Cars</string>
+    <string name="bikes">Bikes</string>
+    <string name="autostore">Autostore</string>
+    <string name="search_used_cars">Search used cars</string>
+    <string name="all_cities">All Cities</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="browse_used_cars">Browse Used Cars</string>
+    <string name="category">Category</string>
+    <string name="budget">Budget</string>
+    <string name="brand">Brand</string>
+    <string name="model">Model</string>
+    <string name="pakwheels_offering">PakWheels Offering</string>
+    <string name="icon_placeholder">icon_placeholder</string>
+    <string name="loading">Loading...</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="price_pkr_l">Price (PKR/L)</string>
+    <string name="petrol">Petrol</string>
+    <string name="_270">270</string>
+    <string name="diesel">Diesel</string>
+    <string name="_240">240</string>
+    <string name="cng">CNG</string>
+    <string name="_180">180</string>
+    <string name="high_speed_diesel">High Speed Diesel</string>
+    <string name="petrol_super">Petrol (Super)</string>
+    <string name="_263">263</string>
+</resources>
