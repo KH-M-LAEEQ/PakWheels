@@ -1,55 +1,70 @@
 package com.example.project;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage extends AppCompatActivity {
 
-    @SuppressLint("NonConstantResourceId")
+    private BottomNavigationView bottomNav;
+    private static final String DEFAULT_FRAGMENT_TAG = "usedCars";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+        bottomNav = findViewById(R.id.bottom_nav);
 
-        // ✅ Load usedCars fragment by default
+        // Load Home fragment (usedCars) by default only if no saved state
         if (savedInstanceState == null) {
-            loadFragment(new usedCars());
-            bottomNav.setSelectedItemId(R.id.nav_home); // Optional: highlight Home tab
+            loadFragment(new top_nav(), DEFAULT_FRAGMENT_TAG);
+            bottomNav.setSelectedItemId(R.id.nav_home);
         }
 
+        // Handle tab selection
         bottomNav.setOnItemSelectedListener(item -> {
-            Fragment selectedFragment = null;
+            navigateToFragment(item.getItemId());
+            return true;
+        });
 
-            switch (item.getItemId()) {
-                case R.id.nav_home:
-                    selectedFragment = new usedCars();
-                    break;
-                case R.id.nav_add:
-                    selectedFragment = new Add();
-                    break;
-                case R.id.nav_settings:
-                    selectedFragment = new settings();
-                    break;
-            }
-
-            if (selectedFragment != null) {
-                loadFragment(selectedFragment);
-                return true;
-            } else {
-                return false;
-            }
+        // Handle reselect (clicking same tab) - optional
+        bottomNav.setOnItemReselectedListener(item -> {
+            // You might want to add scroll to top or refresh behavior here
+            navigateToFragment(item.getItemId());
         });
     }
 
-    private void loadFragment(Fragment fragment) {
+    private void navigateToFragment(int id) {
+        Fragment fragment = null;
+        String tag = null;
+
+        if (id == R.id.nav_home) {
+            fragment = new top_nav();
+            tag = "top_nav";
+        } else if (id == R.id.nav_add) {
+            fragment = new Add();
+            tag = "add";
+        } else if (id == R.id.nav_settings) {
+            fragment = new settings();
+            tag = "settings";
+        }
+
+        if (fragment != null) {
+            loadFragment(fragment, tag);
+        }
+    }
+
+    private void loadFragment(Fragment fragment, String tag) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragmentContainer, fragment);
+        transaction.replace(R.id.fragmentContainer, fragment, tag);
+
+        // Use commit() instead of commitAllowingStateLoss() for normal operation
+        // commitAllowingStateLoss() should only be used in special cases
         transaction.commit();
     }
 }
