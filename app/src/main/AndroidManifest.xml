@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".car_item_layout"
+            android:exported="false" />
+        <activity
             android:name=".DieselActivity"
             android:exported="false" />
         <activity

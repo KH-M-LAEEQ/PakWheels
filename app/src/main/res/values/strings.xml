@@ -37,4 +37,9 @@
     <string name="high_speed_diesel">High Speed Diesel</string>
     <string name="petrol_super">Petrol (Super)</string>
     <string name="_263">263</string>
+    <string name="browse_new_cars_by_brand">Browse New Cars By Brand</string>
+    <string name="brand_placeholder">Brand_placeholder</string>
+    <string name="popular_new_cars">Popular New Cars</string>
+    <string name="up_comming_cars">Up Comming Cars</string>
+    <string name="newly_launched_cars">Newly Launched Cars</string>
 </resources>

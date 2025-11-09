@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".usedCars">
 
-    <!-- Top Tabs -->
     <LinearLayout
         android:id="@+id/topTabs"
         android:layout_width="0dp"
@@ -25,10 +24,12 @@
             android:id="@+id/tabUsedCars"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:text="@string/used_cars"
             android:textColor="#FFFFFF"
             app:cornerRadius="50dp"
+            android:padding="1dp"
             app:backgroundTint="@android:color/transparent"
             app:strokeWidth="2dp"
             app:strokeColor="@color/white"/>
@@ -36,7 +37,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/tabNewCars"
             android:layout_width="0dp"
+            android:layout_marginTop="5dp"
             android:layout_height="40dp"
+            android:padding="1dp"
             android:layout_weight="1"
             android:text="@string/new_cars"
             android:textColor="#FFFFFF"
@@ -48,6 +51,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/tabBikes"
             android:layout_width="0dp"
+            android:layout_marginTop="5dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:text="@string/bikes"
@@ -61,7 +65,7 @@
             android:id="@+id/tabAutostore"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:padding="1dp"
             android:text="@string/autostore"
@@ -72,7 +76,6 @@
             app:strokeColor="#FFFFFF"/>
     </LinearLayout>
 
-    <!-- Search Bar -->
     <LinearLayout
         android:id="@+id/searchBar"
         android:layout_width="0dp"
@@ -102,7 +105,6 @@
             android:textColor="#FFFFFF"/>
     </LinearLayout>
 
-    <!-- Child Fragment Container (for Category/Model/Brand/Budget) -->
     <FrameLayout
         android:id="@+id/childFragmentContainer"
         android:layout_width="0dp"
